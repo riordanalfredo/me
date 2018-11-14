@@ -1,24 +1,36 @@
 .App {
-  text-align: center;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: "Lato", serif;
 }
-
+/*
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+*/
+/*My Custom CSS*/
+.myName {
+
+}
+
+.myName h1{
+    text-align:left;
+    font-size:15vw;
+    line-height: 0.7em;
+    transition: 1s;
+}
+.myName h1:hover{
+    color:white;
+    transition: 2s;
+    cursor: default;
+}
+.myName p{
+    font-size:3vw;
+    color:#c8c8c8;
 }

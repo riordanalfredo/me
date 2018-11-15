@@ -1,50 +1,35 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
+import logo from './logo.svg';
 import {Button,Grid, Row, Col} from 'react-bootstrap'; // Button from Bootstrap
+import MediaQuery from 'react-responsive';
+
+
 import './App.css';
 
-const MediaQuery = require('react-responsive');
 
-const alignment = {
-    grid: {
-        paddingLeft: 100,
-        paddingRight: 100
-    },
-    row: {
-        marginLeft: 0,
-        marginRight: 0
-    },
-    col: {
-        paddingLeft: 0,
-        paddingRight: 0
-    }
-};
 class App extends Component {
   render() {
 
     return (
       <div className="App">
-          <ItIsMe/>
-          <Grid fluid style={alignment.grid}>
-              <Row style={alignment.row}>
-                  <Col style={alignment.col}>
-                      <Button bsSize="Large " bsStyle="warning" className="btn-gold">SEND</Button>
-                  </Col>
-              </Row>
-          </Grid>
+          <MediaQuery minWidth={1224} >
+              <Grid>
+                  <Row className="show-grid">
+                      <Col md={8} >
+                          <ItIsMe/>
+                      </Col>
+                      <Col md={4}>
+                          <Design/>
+                      </Col>
+                  </Row>
+              </Grid>
+
+          </MediaQuery>
       </div>
     );
   }
 }
 //Header
-const MyHeader = () =>
-    <StickyContainer >
-        <Sticky>
-            {
-
-            }
-        </Sticky>
-    </StickyContainer>
 
 
 //Introduction
@@ -53,8 +38,12 @@ const ItIsMe = () =>
             <h1>RIORDAN</h1>
             <h1>DERVIN</h1>
             <h1>ALFREDO</h1>
-            <p>freelance full-stack developer</p>
+            <h3>freelance full-stack developer</h3>
         </div>
 
+const Design = () =>
+        <div className={"picture"}>
+            <img src={logo}/>
+        </div>
 
 export default App;

@@ -14,9 +14,61 @@
   to { transform: rotate(360deg); }
 }
 */
+
 /*My Custom CSS*/
+.introduction{
+    padding-top:15vh;
+}
+/*Header or NavBar*/
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color:  #262626;
+}
+
+.header h3{
+    font-weight: bold;
+    font-size:1.7em;
+    display: inline-block;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+/*Anchor Link*/
+.anchorLink{
+    background: -webkit-linear-gradient(0.25turn,#c39d63, #fad8a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 2s ease-out 1s;
+}
+.anchorLink:hover{
+    background: -webkit-linear-gradient(0.25turn,#fff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* The progress container (grey background) */
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: #1a1a1a;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+    height: 4px;
+    background: -webkit-linear-gradient(0.75turn,#c39d63, #fad8a0);
+    width: 0%;
+}
+
+
+/*Introduction*/
 .myName {
     text-align:left;
+    height:100vmin;
 }
 
 .myName h1{
@@ -36,7 +88,7 @@
     color:#c8c8c8;
     font-family: 'Raleway', sans-serif;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
+    border-right: .15em solid #fad8a0; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     font-size:2.9vw;
     margin: 0 ; /* Gives that scrolling effect as the typing happens */
@@ -48,7 +100,17 @@
 }
 
 .picture{
-    margin-top:10.5vw;
+    margin-top:5vw;
+}
+
+.picture img{
+    border-radius: 50%;
+}
+
+/*Projects*/
+.projects{
+    background-color:white;
+    min-height: 800px;
 }
 
 /* The typing effect */
@@ -60,5 +122,5 @@
 /* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange }
+    50% { border-color: #fad8a0 }
 }

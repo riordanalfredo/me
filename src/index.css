@@ -26,14 +26,14 @@ h3{ color:white; }
 
 .btn-custom{
     background-color: #222222;
-    border-width: 2px;
+    border-width: 3px;
     border-color: #c39d63;
     color: white;
     transition: 500ms;
 }
 
 .btn-custom:hover{
-    color: #c39d63;
+    color: white;
     border-color: white;
 }
 

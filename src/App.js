@@ -92,14 +92,14 @@ const CustomHeader = () => {
                 <Col md={2} xs={2}>
                     <a href={"#introduction"}><img src={blank} width={110}/></a>
                 </Col>
-                <Col md={10} className={"text-right"} xsHidden>
+                <Col md={10} className={"text-right"} xsHidden smHidden >
                     <AnchorLink name={"HOME"} link={"#introduction"} />
                     <AnchorLink name={"PROJECTS"} link={"#projects"} />
                     <AnchorLink name={"SKILLS"} link={"#skills"} />
                     <AnchorLink name={"RESUME"} link={"#resume"} />
                     <AnchorLink name={"CONTACT"} link={"#contact"} />
                 </Col>
-                <Col xs={10} lgHidden>
+                <Col xs={10} mdHidden lgHidden>
                     <p className={"white text-right"}>HAMBURGER MENU HERE ON RIGHT</p>
                 </Col>
             </Row>

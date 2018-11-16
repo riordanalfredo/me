@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animejs": "^2.2.0",
     "create-react-app": "^2.1.1",
     "react": "^16.6.0",
     "react-bootstrap": "^0.32.4",

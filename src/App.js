@@ -54,6 +54,7 @@ const CustomHeader = () =>
             <Row>
                 <Col md={2}>
                     <img src={blank} width={110}/>
+
                 </Col>
                 <Col md={10} className={"text-right"}>
                     <AnchorLink name={"HOME"} link={"#introduction"} />

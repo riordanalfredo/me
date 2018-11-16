@@ -1,6 +1,5 @@
 html{
     scroll-behavior: smooth;
-
 }
 
 body {
@@ -8,7 +7,7 @@ body {
   padding: 0;
     height: 100%;
   font-family: sans-serif;
-    background-color: #181818;
+    background-color: #111;
     background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
     background-attachment: fixed;
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -25,13 +24,17 @@ h3{ color:white; }
     color:white;
 }
 
-.btn-gold{
+.btn-custom{
     background-color: #222222;
     border-width: 2px;
-    border-color: darkgoldenrod;
-    width:25vmax;
+    border-color: #c39d63;
     color: white;
     transition: 500ms;
+}
+
+.btn-custom:hover{
+    color: #c39d63;
+    border-color: white;
 }
 
 .full-height{
@@ -44,8 +47,8 @@ footer{
     z-index: 1;
     color:white;
     text-align:center;
-    font-size:0.9em;
-    padding-top:20px;
+    font-size:0.8em;
+    padding-top:10px;
     height:60px;
     letter-spacing: 3px;
     background-color: #262626;

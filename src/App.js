@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import logo from './img/logo.svg';
 import blank from './img/blank.png';
 import profFoto from './img/portrait.jpg';
-import {Grid, Row, Col} from 'react-bootstrap'; // Button from Bootstrap
+import {Grid, Row, Col, Button} from 'react-bootstrap'; // Button from Bootstrap
+import { bootstrapUtils } from 'react-bootstrap/lib/utils'
 import MediaQuery from 'react-responsive';
 import './App.css';
-import './css/stars.css'
+
+//Internal javascript files
+import {MyForm} from './js/forms.js';
+
 import anime from 'animejs';
 
 //Screen Sizes
@@ -21,26 +25,14 @@ class App extends Component {
             hyperlink:'',
         };
     }
-    /*
-    componentDidMount(){
-        anime({
-            targets: '#card',
-            translateX: [
-                { value: 100, duration: 1000 },
-                { value: -50, duration: 2500 },
-            ],
-            duration: 3000,
-        });
-    }
-    */
 
   render() {
     const {hyperlink} = this.state;
     return (
       <div className="App">
           <main>
+              <CustomHeader/>
               <MediaQuery minDeviceWidth={desktop}>
-                  <CustomHeader/>
                   <MediaQuery minWidth={desktop}>
                       <Grid className={"introduction"} id={"introduction"}>
                           <Row className={"full-height"}>
@@ -64,6 +56,17 @@ class App extends Component {
                       <Contact/>
                   </MediaQuery>
               </MediaQuery>
+              <MediaQuery maxDeviceWidth={desktop}>
+                  <Grid className={"introduction"} id={"introduction"}>
+                      <Row>
+                          <ItIsMe/>
+                      </Row>
+                  </Grid>
+                  <p className={"white"}>
+                      <i>Mobile view is under development at the moment</i>
+                  </p>
+                  <Contact/>
+              </MediaQuery>
           </main>
           <Footer/>
       </div>
@@ -86,15 +89,18 @@ const CustomHeader = () => {
     <div className="header" id={"navbar"} >
         <Grid>
             <Row>
-                <Col md={2}>
+                <Col md={2} xs={2}>
                     <a href={"#introduction"}><img src={blank} width={110}/></a>
                 </Col>
-                <Col md={10} className={"text-right"}>
+                <Col md={10} className={"text-right"} xsHidden>
                     <AnchorLink name={"HOME"} link={"#introduction"} />
                     <AnchorLink name={"PROJECTS"} link={"#projects"} />
                     <AnchorLink name={"SKILLS"} link={"#skills"} />
                     <AnchorLink name={"RESUME"} link={"#resume"} />
                     <AnchorLink name={"CONTACT"} link={"#contact"} />
+                </Col>
+                <Col xs={10} lgHidden>
+                    <p className={"white text-right"}>HAMBURGER MENU HERE ON RIGHT</p>
                 </Col>
             </Row>
         </Grid>
@@ -117,13 +123,9 @@ const AnchorLink = ({name,link}) =>
         </a>;
 
 const screenCalculator = ({size}) => {
-    console.log({size});
-    console.log({desktop});
     return(
     (({size}.valueOf() === {mobile}.valueOf()) ? 'hidden' : 'show'));
 };
-
-
 
 /*General Objects*/
 //Separator
@@ -137,6 +139,7 @@ const Separator = () =>
         </defs>
         <rect x="0" y="0" width="600" height="200" fill="url(#linear)" />
     </svg>;
+
 //Card
 //Must be refactored!
 const Card = (pic) =>
@@ -151,8 +154,8 @@ const CardContent = (breadth, length, children) =>
             <div className={"content"}>
                 <p>
                     Welcome to my portfolio website.
-                    At the moment, this website is under construction.
-                    It is planned to be finish by 30 November 2018.
+                    This website is under construction at the moment.
+                    It is planned to be finish by <b>30 November 2018</b>.
                 </p>
                 <h3>STAY TUNED!</h3>
             </div>
@@ -185,9 +188,7 @@ const Projects = () =>
                     <h1>PROJECTS</h1>
                 </div>
             </Grid>
-        </div>
-
-
+        </div>;
 
 //Skills
 const Skills = () =>
@@ -221,6 +222,9 @@ const Contact = () =>
             <Separator/>
             <div className={"content"}>
                 <h1>CONTACT ME</h1>
+                <div className={"contact-form"}>
+                    <MyForm/>
+                </div>
             </div>
         </Grid>
     </div>;
@@ -228,7 +232,7 @@ const Contact = () =>
 //Footer
 const Footer = () =>
     <footer>
-        Developed with React<img src={logo} width={30}/>
+        Developed with React<img src={logo} width={30}/><br/>
         by <b> Riordan Dervin Alfredo </b>&copy; 2018
     </footer>;
 

@@ -119,7 +119,7 @@
 
 @media(max-width: 737px){
     .myName {
-        padding-top:7vh;
+        padding-top:2vh;
         text-align:center;
         font-size:5em;
         cursor: default;

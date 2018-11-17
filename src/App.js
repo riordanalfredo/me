@@ -5,6 +5,7 @@ import './App.css';
 //Pictures
 import logo from './img/logo.svg';
 import blank from './img/blank.png';
+import aus from './img/aus.png';
 //Internal javascript files
 import {MyForm} from './js/forms.jsx';
 import {Project} from './js/projects.jsx';
@@ -137,14 +138,32 @@ const CardContent = (breadth, length, children) =>
 /*==============Page objects==================*/
 /*==============Introduction==================*/
 //Introduction
-const ItIsMe = (size) =>
-    <div className={"myName "+ screenCalculator(size) } >
-        <p><i>Hello, my name is</i></p>
-        <h1>RIORDAN</h1>
-        <h1>DERVIN</h1>
-        <h1>ALFREDO</h1>
-        <h3>freelance full-stack developer</h3>
-    </div>;
+
+
+const ItIsMe = (size) =>{
+
+    const styles={
+        borderRadius:"3px",
+        border: '3px white'
+    };
+
+    const marginIng = {
+        marginTop:"30px"
+    };
+    return(
+        <div className={"myName "+ screenCalculator(size) } >
+
+            <p><i>Hello, my name is</i></p>
+            <h1>RIORDAN</h1>
+            <h1>DERVIN</h1>
+            <h1>ALFREDO</h1>
+
+            <h3>freelance full-stack developer</h3>
+            <p align="center" style={marginIng}>melbourne <img src={aus} width={30} style={styles}/> based</p>
+        </div>
+    );
+};
+
 
 //Photo
 const ProfilePic = () =>
@@ -221,7 +240,7 @@ const Interests = () =>{
     );
 };
 
-const MyChart = () =>{
+const SkillsList = () =>{
 
     return(
         <div>

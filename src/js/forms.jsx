@@ -32,7 +32,7 @@ export class MyForm extends Component {
     }
     render() {
         return (
-            <form>
+            <form className={"hide"}>
                 <FormGroup
                     controlId="formBasicText"
                     validationState={this.getValidationState()}
@@ -58,7 +58,7 @@ export class MyForm extends Component {
                 <FormGroup controlId="formControlsSelect" bsSize="lg">
                     <ControlLabel>Occasion</ControlLabel>
                     <FormControl componentClass="select" placeholder="select">
-                        <option value="select" selected disabled >Choose one...</option>
+                        <option value="select" defaultValue disabled >Choose one...</option>
                         <option value="hire">Hire me!</option>
                         <option value="project">Project Discussion</option>
                         <option value="appreciation">Project Appreciation</option>

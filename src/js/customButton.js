@@ -12,8 +12,9 @@ export class MyButton extends Component {
         this.handleClick = this.handleClick.bind(this);
 
         this.state = {
-            isLoading: false
+            isLoading: false,
         };
+
     }
 
     handleClick() {
@@ -28,16 +29,19 @@ export class MyButton extends Component {
 
     render() {
         const { isLoading } = this.state;
+        const {text, link} = this.props;
         return (
-            <Button
-                bsStyle="custom"
-                disabled={isLoading}
-                onClick={!isLoading ? this.handleClick : null}
-                bsSize={"lg"}
-                block
-            >
-                {isLoading ? 'Submitting...' : 'Submit'}
-            </Button>
+            <a href={link}>
+                <Button
+                    bsStyle="custom"
+                    disabled={isLoading}
+                    onClick={!isLoading ? this.handleClick : null}
+                    bsSize={"lg"}
+                    block
+                >
+                    {isLoading ? text+'ing...' : text}
+                </Button>
+            </a>
         );
     }
 }

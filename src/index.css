@@ -1,6 +1,4 @@
-html{
-    scroll-behavior: smooth;
-}
+html{scroll-behavior: smooth;}
 
 body {
   margin: 0;
@@ -20,17 +18,14 @@ a, a:hover{ text-decoration: none; }
 h1{ margin: 0;    font-weight: bold; }
 h3{ color:white; }
 
-.hide{
-    display: none;
-}
+.hide{display: none;}
 
-.white{
-    color:white;
-}
+.white{color:white;}
 
 .content{
     margin-top:20px;
 }
+
 
 .btn-custom{
     background-color: #222222;

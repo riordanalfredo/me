@@ -14,23 +14,21 @@ export class SolarSystem extends Component {
     render(){
         return (
             <div className={"solarSystem"}>
-                <div className={"sun"}>
-                    <h1>Full-Stack Framework</h1>
-                </div>
-                <Planet label={"MongoDb"} logo={"fas fa-database"}line={400} size={90} duration={20} type={1} extra={-20}/>
-                <Planet label={"NodeJs"} logo={"fab fa-node-js"} line={500} size={80} duration={25} type={2} extra={50}/>
-                <Planet label={"ExpressJS"} logo={"fab fa-node-js"} line={700} size={90} duration={40} type={3} extra={30}/>
-                <Planet label={"React"} logo={"fab fa-react"} line={900} size={100} duration={30} type={4} extra={90}/>
+                <Star desc="Full Stack Framework"/>
+                <Planet label={"MongoDB"} logo={"fas fa-database"} line={400} size={120} duration={20} type={1} extra={-25}/>
+                <Planet label={"NodeJs"} logo={"fab fa-node-js"} line={530} size={100} duration={15} type={2} extra={40}/>
+                <Planet label={"ExpressJS"} logo={"fab fa-node-js"} line={700} size={130} duration={40} type={3} extra={55}/>
+                <Planet label={"React"} logo={"fab fa-react"} line={900} size={100} duration={15} type={4} extra={85}/>
             </div>
-        );
+        )
     }
 }
 
 //Star
-const Star = ({desc, ...props}) =>{
+const Star = ({desc}) =>{
   return (
       <div className={"sun"}>
-
+          <h1>{desc}</h1>
       </div>
   );
 };
@@ -39,12 +37,9 @@ class Planet extends Component {
     constructor(props){
         super(props);
         this.state = {
-            label:props.label,
-            logo: props.logo,
-            line: props.line,
-            size: props.size,
-            type: props.type,
-            duration: props.duration,
+            label:props.label, logo: props.logo,
+            line: props.line, size: props.size,
+            type: props.type, duration: props.duration,
             extra: props.extra,
         }
     }
@@ -73,12 +68,11 @@ class Planet extends Component {
             borderRadius: '50%',
         };
 
-
         return(
             <div style={path}>
                 <div className={"planet"} style={planet}>
-                    <i className={logo}/>
-                    <p>{label}</p>
+                    <i className={logo}/><br/>
+                    <label>{label}</label>
                 </div>
             </div>
         );

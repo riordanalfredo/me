@@ -192,7 +192,6 @@ const Skills = () =>{
     const styles={
         marginTop: '5vh',
     };
-
     return(
         <div className={"skills white"} >
             <AnchorFake position={"skills"}/>
@@ -201,12 +200,63 @@ const Skills = () =>{
                 <div className={"content"}>
                     <h1>SKILLS &amp; INTERESTS</h1>
                     <SolarSystem/>
+                    <br/>
+                    <p>Diagram above is MERN framework for my Full-Stack Web Development. </p>
+                    <OtherSkills/>
                 </div>
             </Grid>
         </div>
     );
 };
 
+class OtherSkills extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            skills : [
+                {name: "HTML5", logo: "fab fa-html5"},
+                {name: "CSS3", logo: "fab fa-css3"},
+                {name: "JavaScript", logo: "fab fa-js-square"},
+                {name: "Python", logo: "fab fa-python"},
+                {name: "Java", logo: "fab fa-java"},
+                {name: "GitHub", logo: "fab fa-github"},
+                {name: "GitLab", logo: "fab fa-gitlab"},
+                {name: "WordPress", logo: "fab fa-wordpress"},
+                {name: "Windows", logo: "fab fa-windows"},
+                {name: "Linux", logo: "fab fa-linux"},
+                {name: "MacOS", logo: "fab fa-apple"},
+                {name: "Docker", logo: "fab fa-docker"}
+            ]
+        }
+    }
+    render(){
+        const {skills} = this.state;
+        const icons = {
+            color: "#fad8a0",
+            fontSize: '7em',
+            transition: "1s"
+        };
+        const style = {
+            margin: "30px auto",
+        };
+
+        return(
+            <div>
+                <h2>OTHER NOTABLE SKILLS</h2>
+                <Grid>
+                    {skills.map(item =>
+                        <Col className="otherSkills" md={3} style={style}>
+                            <i className={item.logo} style={icons}/><br/><br/>
+                            <label>{item.name}</label>
+                        </Col>
+                        )
+                    }
+                </Grid>
+            </div>
+        );
+    }
+
+}
 
 /*==============Resume==================*/
 //Resume

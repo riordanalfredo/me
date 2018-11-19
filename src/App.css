@@ -173,7 +173,7 @@
     padding-top:2vh;
     padding-bottom:2vh;
     background-color:white;
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
 /*Skills*/
@@ -182,7 +182,26 @@
     padding-bottom:2vh;
     min-height: 100vh;
 }
+.skills p{
+    text-align:center;
+    font-size:1.5em;
+    letter-spacing: 5px;
+}
+.skills h2{
+    color:#c39d63;
+    font-size: 3em;
+}
 
+.otherSkills i:hover{
+    color:white;
+    transform: translateY(-15px);
+}
+.otherSkills label{
+    font-size: 1.2em;
+    letter-spacing: 3px;
+}
+
+/*Resume CSS*/
 .resume{
     padding-top:2vh;
     padding-bottom:2vh;

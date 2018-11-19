@@ -1,5 +1,6 @@
 .solarSystem{
     margin-top: 400px;
+    height: 600px;
 }
 .sun{
     position:relative;
@@ -22,12 +23,12 @@
  .planet i{
      text-align: center;
      color:#1a1a1a;
-     font-size:2.5em;
+     font-size:4em;
  }
 
- .planet p{
+ .planet label{
      color:#1a1a1a;
-     font-size:1em;
+     font-size:1.2em;
  }
 
 @keyframes rot1 {

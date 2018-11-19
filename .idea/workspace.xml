@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0c273a-9b32-41b2-b17b-da9f3444f21b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/solarSystem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/solarSystem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,7 +46,7 @@
     <session id="708251965">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
@@ -105,7 +102,7 @@
           <entry key="jsx" value="420" />
           <entry key="md" value="308" />
           <entry key="svg" value="10" />
-          <entry key="txt" value="579" />
+          <entry key="txt" value="630" />
           <entry key="yml" value="9" />
         </counts>
       </usages-collector>
@@ -117,7 +114,7 @@
           <entry key="JSX Harmony" value="420" />
           <entry key="JavaScript" value="13174" />
           <entry key="Markdown" value="308" />
-          <entry key="PLAIN_TEXT" value="579" />
+          <entry key="PLAIN_TEXT" value="630" />
           <entry key="SVG" value="10" />
           <entry key="YAML" value="9" />
         </counts>
@@ -383,7 +380,7 @@
       <workItem from="1542454529596" duration="229000" />
       <workItem from="1542455372825" duration="2086000" />
       <workItem from="1542531846585" duration="3707000" />
-      <workItem from="1542583432678" duration="8236000" />
+      <workItem from="1542583432678" duration="8313000" />
     </task>
     <task id="LOCAL-00001" summary="Test building CI">
       <created>1542327302707</created>
@@ -448,11 +445,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542456918200</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finish with solar system.. need refactor later on">
+      <created>1542592315688</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1542592315688</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100375000" />
+    <option name="totallyTimeSpent" value="100452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="660" y="12" width="1065" height="1045" extended-state="0" />
@@ -497,7 +501,8 @@
     <MESSAGE value="Update size and finalising for today development" />
     <MESSAGE value="Finish with Projects page.&#10;Refactor Contact me page.&#10;Next : think about Skills and Resume (must do some research about it)" />
     <MESSAGE value="Add location in the main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add location in the main page" />
+    <MESSAGE value="Finish with solar system.. need refactor later on" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish with solar system.. need refactor later on" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

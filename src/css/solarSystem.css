@@ -1,0 +1,48 @@
+.solarSystem{
+    margin-top: 400px;
+}
+.sun{
+    position:relative;
+    margin:0 auto ;
+    text-align: center;
+    height:15em;
+    width: 15em;
+    background: linear-gradient(45deg, #c39d63,#fad8a0);
+    padding: 70px 36px;
+    border-radius: 50%;
+}
+.sun h1{
+    color: white;
+    text-shadow: 0px 1px #5a5a5a;
+    font-size:2em;
+    text-align: center;
+}
+
+
+ .planet i{
+     text-align: center;
+     color:#1a1a1a;
+     font-size:2.5em;
+ }
+
+ .planet p{
+     color:#1a1a1a;
+     font-size:1em;
+ }
+
+@keyframes rot1 {
+    0% { transform: rotate(0deg) translate(200px) rotate(0deg); }
+    100% { transform: rotate(-360deg) translate(200px) rotate(360deg); }
+}
+@keyframes rot2 {
+    0% { transform: rotate(0deg) translate(250px) rotate(0deg); }
+    100% { transform: rotate(360deg) translate(250px) rotate(-360deg); }
+}
+@keyframes rot3 {
+    0% { transform: rotate(0deg) translate(350px) rotate(0deg); }
+    100% { transform: rotate(-360deg) translate(350px) rotate(360deg); }
+}
+@keyframes rot4 {
+    0% { transform: rotate(0deg) translate(450px) rotate(0deg); }
+    100% { transform: rotate(-360deg) translate(450px) rotate(360deg); }
+}

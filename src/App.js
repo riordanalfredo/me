@@ -9,6 +9,7 @@ import aus from './img/aus.png';
 //Internal javascript files
 import {MyForm} from './js/forms.jsx';
 import {Project} from './js/projects.jsx';
+import {SolarSystem} from './js/solarSystem';
 //Animation API
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
@@ -84,9 +85,10 @@ class App extends Component {
 }
 
 /*==============General Objects==================*/
-//Link Header Anchor
+//Link Header Anchor by faking its position
 const AnchorFake = ({position}) => <span className="anchor" id={position}> </span>;
 
+//Link to anchor
 const AnchorLink = ({name,link}) =>
     <a href={link}>
         <h3 className={"anchorLink"}>
@@ -113,7 +115,7 @@ const Separator = () =>
     </svg>;
 
 //Card
-const CardHorizontal = (pic) =>
+const CardHorizontal = () =>
     <div className="card-horizontal">
 
         <ProfilePic/>
@@ -122,7 +124,7 @@ const CardHorizontal = (pic) =>
         </Fade>
     </div>;
 
-const CardContent = (breadth, length, children) =>
+const CardContent = () =>
     <div className={"card-content"} >
         <Separator/>
         <div className={"content"}>
@@ -141,7 +143,6 @@ const CardContent = (breadth, length, children) =>
 
 
 const ItIsMe = (size) =>{
-
     const styles={
         borderRadius:"3px",
         border: '3px white'
@@ -199,55 +200,13 @@ const Skills = () =>{
                 <Separator/>
                 <div className={"content"}>
                     <h1>SKILLS &amp; INTERESTS</h1>
-                    <Grid style={styles}>
-                        <Row>
-                            <Col md={8}>
-
-                            </Col>
-                            <Col md={4}>
-
-                            </Col>
-                        </Row>
-                    </Grid>
+                    <SolarSystem/>
                 </div>
             </Grid>
         </div>
     );
 };
 
-//Interest
-const Interests = () =>{
-    const styles= {
-        fontSize: "1.2em",
-        textAlign: "justify",
-        fontFamily: "Raleway, sans serif",
-        fontColorOnHover: "#c39d63"
-    };
-
-    return(
-        <div>
-            <p style={styles}>
-                <Fade bottom cascade>
-                    My interests are in:
-
-                    <ul>Artificial Intelligence (AI)</ul>
-                    <ul>User Interface (UI)</ul>
-                    <ul>User Experience (UX)</ul>
-
-                    Astronomy has always been my live.
-                </Fade></p>
-        </div>
-    );
-};
-
-const SkillsList = () =>{
-
-    return(
-        <div>
-            Hello
-        </div>
-    );
-}
 
 /*==============Resume==================*/
 //Resume

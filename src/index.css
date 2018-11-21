@@ -14,7 +14,7 @@ body {
 main{
     padding-bottom:60px;
 }
-a, a:hover{ text-decoration: none; }
+a, a:hover{ text-decoration: none; color:#fad8a0 }
 h1{ margin: 0;    font-weight: bold; }
 h3{ color:white; }
 
@@ -24,21 +24,12 @@ h3{ color:white; }
 
 .content{
     margin-top:20px;
+    margin-bottom:100px;
+}
+.content h1{
+    margin-bottom:20px;
 }
 
-
-.btn-custom{
-    background-color: #222222;
-    border-width: 3px;
-    border-color: #c39d63;
-    color: white;
-    transition: 500ms;
-}
-
-.btn-custom:hover{
-    color: white;
-    border-color: white;
-}
 
 .full-height{
     height:90vh;

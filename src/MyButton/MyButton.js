@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import {bootstrapUtils} from "react-bootstrap/lib/utils";
 import {Button} from "react-bootstrap";
+import styling from "./MyButton.css";
 
 bootstrapUtils.addStyle(Button, 'custom');
 export class MyButton extends Component {
@@ -12,9 +13,10 @@ export class MyButton extends Component {
         this.handleClick = this.handleClick.bind(this);
 
         this.state = {
+            size: "300px",
             isLoading: false,
+            styling
         };
-
     }
 
     handleClick() {
@@ -28,18 +30,18 @@ export class MyButton extends Component {
     }
 
     render() {
-        const { isLoading } = this.state;
-        const {text, link} = this.props;
+        const { isLoading} = this.state;
+        const {text, link, download, extraText} = this.props;
         return (
-            <a href={link}>
+            <a href={require("../MyResume/resume.pdf")} download="resume.pdf">
                 <Button
                     bsStyle="custom"
                     disabled={isLoading}
                     onClick={!isLoading ? this.handleClick : null}
                     bsSize={"lg"}
-                    block
                 >
-                    {isLoading ? text+'ing...' : text}
+                    {isLoading ? text.toLowerCase()+'ing...' : text}
+                    {isLoading ? null : extraText}
                 </Button>
             </a>
         );

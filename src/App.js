@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, Fragment} from 'react';
 import {Grid, Row, Col} from 'react-bootstrap'; // Button from Bootstrap
 import MediaQuery from 'react-responsive';
 import './App.css';
@@ -8,11 +8,14 @@ import blank from './img/blank.png';
 import aus from './img/aus.png';
 //Internal javascript files
 import {MyForm} from './js/forms.jsx';
-import {Project} from './js/projects.jsx';
-import {SolarSystem} from './js/solarSystem';
+import {Project} from './Projects/Projects.jsx';
+import {MyResume} from "./MyResume/MyResume";
+import {SolarSystem} from './SolarSystem/SolarSystem';
+import {Separator} from "./Separator/Separator";
 //Animation API
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
+import { slide as Menu } from 'react-burger-menu';
 
 //Screen Sizes
 const mobile = 300;
@@ -22,7 +25,6 @@ class App extends Component {
     constructor(props)
     {
         super(props);
-
         this.state = {
             loading:false
         };
@@ -59,10 +61,18 @@ class App extends Component {
                   </MediaQuery>
                   <MediaQuery minWidth={mobile} maxWidth={desktop}>
                       <Grid className={"introduction"} id={"introduction"}>
+                          <Row className={"full-height"}>
+                              <ItIsMe size={mobile}/>
+                          </Row>
                           <Row>
-                              <ProfilePic/>
+                              <Fade>
+                                  <CardHorizontal pic={ProfilePic}/>
+                              </Fade>
                           </Row>
                       </Grid>
+                      <Projects mobile/>
+                      <Skills/>
+                      <Resume/>
                       <Contact/>
                   </MediaQuery>
               </MediaQuery>
@@ -84,6 +94,8 @@ class App extends Component {
   }
 }
 
+
+
 /*==============General Objects==================*/
 //Link Header Anchor by faking its position
 const AnchorFake = ({position}) => <span className="anchor" id={position}> </span>;
@@ -102,22 +114,10 @@ const screenCalculator = ({size}) => {
     (({size}.valueOf() === {mobile}.valueOf()) ? 'hidden' : 'show'));
 };
 
-//Separator
-const Separator = () =>
-    <svg width="100" height="10" >
-        <defs>
-            <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stopColor="#c39d63"/>
-                <stop offset="100%" stopColor="#fad8a0"/>
-            </linearGradient>
-        </defs>
-        <rect x="0" y="0" width="600" height="200" fill="url(#linear)" />
-    </svg>;
 
 //Card
 const CardHorizontal = () =>
     <div className="card-horizontal">
-
         <ProfilePic/>
         <Fade left>
             <CardContent/>
@@ -131,7 +131,7 @@ const CardContent = () =>
             <p>
                 Welcome to my portfolio website.
                 This website is under construction at the moment.
-                It is planned to be finish by <b>30 November 2018</b>.
+                It is planned to be finished by <b>30 November 2018</b>.
             </p>
             <h3>STAY TUNED!</h3>
         </div>
@@ -140,27 +140,19 @@ const CardContent = () =>
 /*==============Page objects==================*/
 /*==============Introduction==================*/
 //Introduction
-
-
 const ItIsMe = (size) =>{
     const styles={
         borderRadius:"3px",
         border: '3px white'
     };
 
-    const marginIng = {
-        marginTop:"30px"
-    };
     return(
         <div className={"myName "+ screenCalculator(size) } >
-
-            <p><i>Hello, my name is</i></p>
+            <p align="center" >Melbourne<img alt="Australia flag" src={aus} width={30} style={styles}/> Based</p>
             <h1>RIORDAN</h1>
             <h1>DERVIN</h1>
             <h1>ALFREDO</h1>
-
             <h3>freelance full-stack developer</h3>
-            <p align="center" style={marginIng}>melbourne <img src={aus} width={30} style={styles}/> based</p>
         </div>
     );
 };
@@ -174,40 +166,56 @@ const ProfilePic = () =>
 
 /*==============Projects==================*/
 //Projects
-const Projects = () =>
-    <div className={"projects"} >
-        <AnchorFake position={"projects"}/>
-        <Grid>
-            <Separator/>
-            <div className={"content"}>
-                <h1>PROJECTS</h1>
-                <Fade bottom> <Project/>  </Fade>
-            </div>
-        </Grid>
-    </div>;
-
-/*==============Skills==================*/
-//Skills
-const Skills = () =>{
-    const styles={
-        marginTop: '5vh',
+const Projects = ({mobile}) =>{
+    let setting = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: mobile?1:3,
+        slidesToScroll: 1
     };
+
     return(
-        <div className={"skills white"} >
-            <AnchorFake position={"skills"}/>
+        <div className={"projects"} >
+            <AnchorFake position={"projects"}/>
             <Grid>
                 <Separator/>
                 <div className={"content"}>
-                    <h1>SKILLS &amp; INTERESTS</h1>
-                    <SolarSystem/>
-                    <br/>
-                    <p>Diagram above is MERN framework for my Full-Stack Web Development. </p>
-                    <OtherSkills/>
+                    <h1>PROJECTS</h1>
+                    <Fade bottom> <Project setting={setting}/>  </Fade>
                 </div>
             </Grid>
         </div>
     );
 };
+
+/*==============Skills==================*/
+//Skills
+const Skills = () =>
+    <div className={"skills white"} >
+        <AnchorFake position={"skills"}/>
+        <Grid>
+            <Separator/>
+            <div className={"content"}>
+                <h1>SKILLS &amp; INTERESTS</h1>
+                <Fade bottom>
+                    <h2>My Full-Stack Framework</h2>
+                    <SolarSystem/>
+                    <p>Diagram above is MERN framework for my Full-Stack Web Development. </p>
+                </Fade>
+                <Fade bottom>
+                    <Separator/>
+                    <h2>Languages and Software</h2>
+                    <OtherSkills/>
+                </Fade>
+                <Fade bottom >
+                    <Separator/>
+                    <h2>Interests and Hobbies</h2>
+                    <Interests/>
+                </Fade>
+            </div>
+        </Grid>
+    </div>;
 
 class OtherSkills extends Component {
     constructor(props){
@@ -242,10 +250,9 @@ class OtherSkills extends Component {
 
         return(
             <div>
-                <h2>OTHER NOTABLE SKILLS</h2>
                 <Grid>
                     {skills.map(item =>
-                        <Col className="otherSkills" md={3} style={style}>
+                        <Col className="otherSkills" md={3} xs={6} style={style}>
                             <i className={item.logo} style={icons}/><br/><br/>
                             <label>{item.name}</label>
                         </Col>
@@ -255,8 +262,26 @@ class OtherSkills extends Component {
             </div>
         );
     }
+};
 
-}
+const Interests = () =>{
+    const middle = {
+        textAlign: "center",
+        margin: "30px auto",
+        width: "65vw"
+    };
+    return(
+        <div style={middle}>
+            <p>
+                I am interested in Artificial Intelligence (AI), User Experience &
+                User Interface (UI & UX), Software testing, and Astronomy topics. In leisure time,
+                I create graphic design, doodling, and playing video / board games.
+                Sometimes, I read <a href={"https://medium.com/"}>Medium</a> to gain knowledge and
+                read memes / graphic novels to refresh my mind.
+            </p>
+        </div>
+    );
+};
 
 /*==============Resume==================*/
 //Resume
@@ -267,6 +292,7 @@ const Resume = () =>
             <Separator/>
             <div className={"content"}>
                 <h1>RESUME &amp; EDUCATION</h1>
+                <MyResume/>
             </div>
         </Grid>
     </div>;
@@ -282,7 +308,9 @@ const Contact = () =>
                 <h1>CONTACT ME</h1>
                 <div className={"contact-form"}>
                     <MyForm />
-                    <TempContact />
+                    <Fade bottom>
+                        <TempContact/>
+                    </Fade>
                 </div>
             </div>
         </Grid>
@@ -291,14 +319,15 @@ const Contact = () =>
 const TempContact = () =>{
     let uri = "Hello from /me website";
     const res = encodeURI(uri);
-    const styles = {
+    const rowStyles = {
         textAlign:"center"
     };
 
+
     return(
         <div className={"contact-temp"}>
-            <Grid>
-                <Row style={styles}>
+            <Grid >
+                <Row style={rowStyles}>
                     <Col md={4}>
                         <a href={"mailto:riordan.alfredo@gmail.com"}>
                             <i className={"material-icons contact-icon"}>email</i>
@@ -335,6 +364,7 @@ const CustomHeader = () => {
             document.getElementById("progressBar").style.width = scrolled + "%";
         };
     }
+
     return(
         <div className="header" id={"navbar"} >
             <Grid>
@@ -350,7 +380,7 @@ const CustomHeader = () => {
                         <AnchorLink name={"CONTACT"} link={"#contact"} />
                     </Col>
                     <Col xs={10} mdHidden lgHidden>
-                        <p className={"white text-right"}>HAMBURGER MENU</p>
+
                     </Col>
                 </Row>
             </Grid>

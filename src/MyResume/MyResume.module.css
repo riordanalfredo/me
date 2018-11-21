@@ -1,0 +1,46 @@
+.theBox{
+    margin: 7vh auto;
+    padding: 2vh;
+    background-color: white;
+    border-radius: 25px;
+    min-height: 30vh;
+    box-shadow: 0px 15px 25px -6px rgba(196,196,196,1);
+}
+
+.theBox h2{
+    color:#222222;
+    font-size: 3em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.theBox b{
+    font-size: 1.2em;
+}
+.theBox p{
+    font-size: 1.1em;
+}
+
+.theBox i {
+    font-size: 1.2em;
+    color: #c39d63;
+}
+
+.download{
+    font-size: 1.7em;
+    letter-spacing: 3px;
+}
+
+.research{
+    margin: 0 9vw;
+}
+.research h4{
+    margin-top: 3vh;
+    color:#c39d63;
+    font-size: 1.7em;
+}
+
+.research p{
+    text-align: justify;
+    line-height: 2em;
+    font-size: 1.2em;
+}

@@ -3,7 +3,6 @@
     color: #c39d63; // Gold
     color: #fad8a0; // Bright Yellow
 */
-
 .App {
     text-align: center;
     margin-left:auto;
@@ -11,17 +10,6 @@
     font-family: "Lato", serif;
     user-select: none;
 }
-/*
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-*/
-
 /*My Custom CSS*/
 /*Header or NavBar*/
 .header {
@@ -36,10 +24,9 @@
     font-weight: bold;
     font-size:1.4em;
     display: inline-block;
-    margin-left:15px;
-    margin-right:15px;
+    margin:20px 15px;
 }
-@media (max-width: 737px){
+@media (max-width: 1224px){
     .header h3 {
         display: none;
     }
@@ -79,7 +66,7 @@
 }
 .myName {
     text-align:left;
-    font-size:15em;
+    font-size:25vh;
     cursor: default;
 }
 .myName p{
@@ -90,7 +77,8 @@
     margin: 0;
 }
 .myName h1{
-    font-size: 100%;
+    font-size: 90%;
+    max-font-size: 30px;
     line-height: 0.9em;
     transition: 1s;
     color: #262626;
@@ -100,24 +88,38 @@
     transition: 1.5s;
     transform: translate(5px);
 }
-/*Animated Paragraph*/
-.myName h3{
-    color:white;
-    font-family: 'Raleway', sans-serif;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #fad8a0; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    font-size:35px;
-    width:56%;
-    margin-top:0; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    transition: 1s;
-    animation:
-            typing 2.5s steps(30, end),
-            blink-caret 1s step-end infinite;
+
+@media(min-width: 1224px){
+    /*Animated Paragraph*/
+    .myName h3{
+        color:white;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid #fad8a0; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        font-size:30px;
+        width:45%;
+        margin-top:0; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        transition: 1s;
+        animation:
+                typing 2.5s steps(30, end),
+                blink-caret 1s step-end infinite;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 60% }
+    }
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #fad8a0 }
+    }
 }
 
-@media(max-width: 737px){
+
+@media(max-width: 1224px){
     .myName {
         padding-top:2vh;
         text-align:center;
@@ -139,21 +141,13 @@
     .myName h3{
         margin-left:auto;
         margin-right:auto;
-        font-size:14px;
+        color: #5a5a5a;
+        font-size:35%;
         width:73vh;
         max-width:75%;
     }
 }
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 60% }
-}
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #fad8a0 }
-}
+
 
 .picture{
     position: relative;
@@ -172,7 +166,9 @@
 .projects{
     padding-top:2vh;
     padding-bottom:2vh;
-    background-color:white;
+    background-color: #ffffff;
+    background-image: url("./img/dark-stripes-light.png");
+    background-attachment: fixed;
     min-height: 70vh;
 }
 
@@ -183,9 +179,10 @@
     min-height: 100vh;
 }
 .skills p{
-    text-align:center;
+    color:#f2f2f2;
     font-size:1.5em;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    line-height: 1.7em;
 }
 .skills h2{
     color:#c39d63;
@@ -194,7 +191,7 @@
 
 .otherSkills i:hover{
     color:white;
-    transform: translateY(-15px);
+    transform: translateY(10px);
 }
 .otherSkills label{
     font-size: 1.2em;
@@ -205,11 +202,9 @@
 .resume{
     padding-top:2vh;
     padding-bottom:2vh;
-    background-image: url("./img/wallpaper.jpg");
+    background-color: #ffffff;
+    background-image: url("./img/dark-stripes-light.png");
     background-attachment: fixed;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     min-height: 100vh;
 }
@@ -223,7 +218,7 @@
     text-align:center;
     margin: 10vh auto;
 }
-@media(max-width: 737px){
+@media(max-width: 1224px){
     .contact-form{
         /*width:80vw*/
     }
@@ -240,12 +235,9 @@
 
 .contact-temp p{
     position:relative;
-    margin:5vh 0 5vh 0;
+    margin:3vh 0 5vh 0;
     font-size:1.5em;
-}
-
-.contact-form form{
-    text-align:left;
+    color:#fad8a0;
 }
 
 /*Fake Anchor*/
@@ -257,10 +249,11 @@
 }
 /*Card CSS*/
 .card{
-    margin-top:10%;
+    margin:30px auto;
     border-radius: 15px;
     height: 500px;
     width:32rem;
+    background-color:white;
     /*Shadow effect*/
     -webkit-box-shadow: 0px 15px 25px -6px rgba(196,196,196,1);
     -moz-box-shadow: 0px 15px 25px -6px rgba(196,196,196,1);
@@ -275,6 +268,7 @@
 }
 .card-pic:hover{
     border-radius:25px;
+    opacity: 0.7;
 }
 
 .card-desc{
@@ -288,41 +282,39 @@
     color: #fad8a0;
 }
 
+@media(min-width: 1224px){
+    .card-horizontal{
+        display: inline-flex;
+        text-align:center;
+    }
 
-.card-horizontal{
-    display: inline-flex;
-    text-align:center;
+    .card-content {
+        position: relative;
+        height: 300px; width:30vw;
+        text-align:center;
+        padding: 5% 7% 10px 18%;
+        margin: 0 auto 50px -50px;
+        border: 4px solid transparent;
+        border-radius:25px;
+        background-clip: padding-box;
+    }
+
+    .card-content::after {
+        position: absolute;
+        top: -4px; bottom: -4px;
+        left: -4px; right: -4px;
+        background-color: #262626;
+        content: '';
+        z-index: -1;
+        border-radius: 25px;
+    }
+    .card-content p{
+        text-align: justify;
+        text-justify: inter-word;
+        font-size:2vh;
+        color:white;
+        letter-spacing: 0.08em;
+    }
 }
-
-
-.card-content {
-    position: relative;
-    height: 300px; width:30vw;
-    text-align:center;
-    padding: 5% 7% 10px 18%;
-    margin: 0 auto 50px -50px;
-    border: 4px solid transparent;
-    border-radius:25px;
-    background-clip: padding-box;
-}
-
-.card-content::after {
-    position: absolute;
-    top: -4px; bottom: -4px;
-    left: -4px; right: -4px;
-    background-color: #262626;
-    content: '';
-    z-index: -1;
-    border-radius: 25px;
-}
-.card-content p{
-    text-align: justify;
-    text-justify: inter-word;
-    font-size:1.2em;
-    font-family: 'Raleway', serif;
-    color:white;
-    letter-spacing: 0.08em;
-}
-
 
 

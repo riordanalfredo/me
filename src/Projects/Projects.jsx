@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
+import Slider from "react-slick";
+import projectStyle from "./Projects.css";
+import Chip from '@material-ui/core/Chip';
 
 export class Project extends Component{
 
@@ -20,7 +22,7 @@ export class Project extends Component{
                     key: 2,
                     title:'Switch Puzzle Game',
                     linkUrl: 'https://bit.do/switchy',
-                    desc:'Puzzle games web application',
+                    desc:'A Puzzle game web application',
                     bg:'https://picsum.photos/400/500/?image=0'
                 },
                 {
@@ -30,44 +32,40 @@ export class Project extends Component{
                     desc:'Survival Guide Web Application ',
                     bg:'https://picsum.photos/400/500/?image=19'
                 },
-
             ],
         }
     }
 
     render() {
         const {list} = this.state;
-        return (
-            <div>
-                <Grid>
-                    <Row>
-                        {list.map(item =>
-                            <Col key={item.key} md={4} xs={12}>
-                                <Card
-                                    title={item.title}
-                                    linkUrl={item.linkUrl}
-                                    desc = {item.desc}
-                                    bg={item.bg}
-                                />
-                            </Col>
-                        )}
-                    </Row>
-                </Grid>
-            </div>
-        );
+        const {setting} = this.props;
 
+        return (
+            <Slider {...setting}>
+                {list.map(item =>
+                    <div key={item.key} style={projectStyle["card-carousel"]}>
+                        <Card
+                            title={item.title}
+                            linkUrl={item.linkUrl}
+                            desc = {item.desc}
+                            bg={item.bg}
+                        />
+                    </div>
+                )}
+            </Slider>
+        );
     }
 }
-
-
-const Card = ({title,bg,linkUrl,desc}) =>{
+const Card = ({title,bg,linkUrl,desc,languages}) =>{
     let image={
         background: `-webkit-linear-gradient(0.9turn,#c39d63, #fad8a0)`,
         backgroundImage: `url(${bg})`
     };
     return(
         <div className={"card"}  >
-            <div className={"card-pic"} style={image}/>
+            <a href={linkUrl}>
+                <div className={"card-pic"} style={image}/>
+            </a>
             <div className={"card-desc"}>
                 <a href={linkUrl}><h2>{title}</h2></a>
                 <p>{desc}</p>

@@ -1,7 +1,7 @@
 //Bootstrap Form
 import React, { Component } from 'react';
 import {FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap'; // Button from Bootstrap
-import {MyButton} from './customButton.js';
+import {MyButton} from '../MyButton/MyButton.js';
 
 const FieldGroup = ({ id, label, help, ...props }) =>
     <FormGroup controlId={id}>

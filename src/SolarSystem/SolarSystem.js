@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Grid} from 'react-bootstrap';
-import '../css/solarSystem.css';
+import './SolarSystem.css';
 
 export class SolarSystem extends Component {
     constructor(props) {
@@ -15,10 +14,10 @@ export class SolarSystem extends Component {
         return (
             <div className={"solarSystem"}>
                 <Star desc="Full Stack Framework"/>
-                <Planet label={"MongoDB"} logo={"fas fa-database"} line={400} size={120} duration={20} type={1} extra={-25}/>
-                <Planet label={"NodeJs"} logo={"fab fa-node-js"} line={530} size={100} duration={15} type={2} extra={40}/>
-                <Planet label={"ExpressJS"} logo={"fab fa-node-js"} line={700} size={130} duration={40} type={3} extra={55}/>
-                <Planet label={"React"} logo={"fab fa-react"} line={900} size={100} duration={15} type={4} extra={85}/>
+                <Planet label={"MongoDB"} logo={"fas fa-database"} line={350} size={90} duration={20} type={1} extra={5}/>
+                <Planet label={"ExpressJS"} logo={"fab fa-node-js"} line={500} size={90} duration={18} type={2} extra={20}/>
+                <Planet label={"NodeJS"} logo={"fab fa-node-js"} line={600} size={100} duration={40} type={3} extra={70}/>
+                <Planet label={"React"} logo={"fab fa-react"} line={750} size={80} duration={15} type={4} extra={75}/>
             </div>
         )
     }
@@ -42,8 +41,7 @@ class Planet extends Component {
             type: props.type, duration: props.duration,
             extra: props.extra,
         }
-    }
-
+    };
     render(){
         const {label,logo,line,size,duration,type,extra} = this.state;
 

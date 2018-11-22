@@ -39,7 +39,6 @@ export class Project extends Component{
     render() {
         const {list} = this.state;
         const {setting} = this.props;
-
         return (
             <Slider {...setting}>
                 {list.map(item =>

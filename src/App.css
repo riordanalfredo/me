@@ -19,13 +19,13 @@
     width: 100%;
     background-color:  #262626;
 }
-
 .header h3{
     font-weight: bold;
     font-size:1.4em;
     display: inline-block;
     margin:20px 15px;
 }
+
 @media (max-width: 1224px){
     .header h3 {
         display: none;
@@ -142,12 +142,9 @@
         margin-left:auto;
         margin-right:auto;
         color: #5a5a5a;
-        font-size:35%;
-        width:73vh;
-        max-width:75%;
+        font-size:30%;
     }
 }
-
 
 .picture{
     position: relative;
@@ -175,7 +172,6 @@
 /*Skills*/
 .skills{
     padding-top:2vh;
-    padding-bottom:2vh;
     min-height: 100vh;
 }
 .skills p{
@@ -184,6 +180,7 @@
     letter-spacing: 3px;
     line-height: 1.7em;
 }
+
 .skills h2{
     color:#c39d63;
     font-size: 3em;
@@ -217,11 +214,6 @@
     /*width:40vw*/
     text-align:center;
     margin: 10vh auto;
-}
-@media(max-width: 1224px){
-    .contact-form{
-        /*width:80vw*/
-    }
 }
 .contact-icon{
     font-size: 8em;
@@ -282,12 +274,12 @@
     color: #fad8a0;
 }
 
+/*Desktop View*/
 @media(min-width: 1224px){
     .card-horizontal{
         display: inline-flex;
         text-align:center;
     }
-
     .card-content {
         position: relative;
         height: 300px; width:30vw;
@@ -317,4 +309,55 @@
     }
 }
 
+/*Mobile View*/
+@media(max-width: 1224px){
+    .picture{
+        text-align: center;
+
+    }
+
+    #pp{
+        border-radius: 25px;
+        margin:10vh auto 2vh auto;
+        width: 300px;
+        height: 300px;
+        background-image: url("./img/portrait.jpg");
+        background-size:cover;
+    }
+
+    .card-content {
+        position: relative;
+        width:300px; min-height:40vh;
+        text-align:center;
+        margin: -10vh auto 10vh auto;
+        padding: 10vh 2vw 0 2vw;
+        background-color: #262626;
+        border-radius:25px;
+    }
+
+    .card-content p{
+        color: white;
+    }
+
+    .card-pic{
+        border-radius: 25px;
+        height:300px;
+        background-size:cover;
+        background-position: center center;
+        transition: 1s;
+    }
+
+    .card{
+        margin:30px auto;
+        border-radius: 25px;
+        height: 450px;
+        width:85vw;
+        background-color:white;
+        box-shadow: 0px 15px 25px -6px rgba(196,196,196,1);
+    }
+
+    .skills p{
+        font-size:1.2em;
+    }
+}
 

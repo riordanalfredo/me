@@ -12,6 +12,7 @@ import {Project} from './Projects/Projects.jsx';
 import {MyResume} from "./MyResume/MyResume";
 import {SolarSystem} from './SolarSystem/SolarSystem';
 import {Separator} from "./Separator/Separator";
+import {FullStack} from "./FullStack/FullStack";
 //Animation API
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
@@ -31,6 +32,22 @@ class App extends Component {
     }
    componentDidMount(){
        //this.setState({ loading: false });
+       //Scrolling progress bar
+       let prevScrollpos = window.pageYOffset;
+       window.onscroll = () => {
+           let currentScrollPos = window.pageYOffset;
+           if (prevScrollpos < currentScrollPos) {
+               document.getElementById("footer").style.bottom = "-60px";
+           } else {
+               document.getElementById("footer").style.bottom = "0px";
+           }
+           prevScrollpos = currentScrollPos;
+           const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+           const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+           const scrolled = (winScroll / height) * 100;
+           document.getElementById("progressBar").style.width = scrolled + "%";
+       };
+
    }
 
   render() {
@@ -71,7 +88,7 @@ class App extends Component {
                           </Row>
                       </Grid>
                       <Projects mobile/>
-                      <Skills/>
+                      <Skills mobile/>
                       <Resume/>
                       <Contact/>
                   </MediaQuery>
@@ -81,10 +98,15 @@ class App extends Component {
                       <Row>
                           <ItIsMe/>
                       </Row>
+                      <Row>
+                          <Fade>
+                              <CardHorizontal pic={ProfilePic}/>
+                          </Fade>
+                      </Row>
                   </Grid>
-                  <p className={"white"}>
-                      <i>Mobile view is under development at the moment</i>
-                  </p>
+                  <Projects mobile/>
+                  <Skills mobile/>
+                  <Resume/>
                   <Contact/>
               </MediaQuery>
           </main>
@@ -113,7 +135,6 @@ const screenCalculator = ({size}) => {
     return(
     (({size}.valueOf() === {mobile}.valueOf()) ? 'hidden' : 'show'));
 };
-
 
 //Card
 const CardHorizontal = () =>
@@ -172,7 +193,8 @@ const Projects = ({mobile}) =>{
         infinite: true,
         speed: 500,
         slidesToShow: mobile?1:3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: !mobile
     };
 
     return(
@@ -191,8 +213,9 @@ const Projects = ({mobile}) =>{
 
 /*==============Skills==================*/
 //Skills
-const Skills = () =>
-    <div className={"skills white"} >
+const Skills = ({mobile}) =>{
+
+    return(<div className={"skills white"} >
         <AnchorFake position={"skills"}/>
         <Grid>
             <Separator/>
@@ -200,7 +223,7 @@ const Skills = () =>
                 <h1>SKILLS &amp; INTERESTS</h1>
                 <Fade bottom>
                     <h2>My Full-Stack Framework</h2>
-                    <SolarSystem/>
+                    {mobile ? <FullStack/> : <SolarSystem/>}
                     <p>Diagram above is MERN framework for my Full-Stack Web Development. </p>
                 </Fade>
                 <Fade bottom>
@@ -215,25 +238,27 @@ const Skills = () =>
                 </Fade>
             </div>
         </Grid>
-    </div>;
+    </div>)
+};
+
 
 class OtherSkills extends Component {
     constructor(props){
         super(props);
         this.state = {
             skills : [
-                {name: "HTML5", logo: "fab fa-html5"},
-                {name: "CSS3", logo: "fab fa-css3"},
-                {name: "JavaScript", logo: "fab fa-js-square"},
-                {name: "Python", logo: "fab fa-python"},
-                {name: "Java", logo: "fab fa-java"},
-                {name: "GitHub", logo: "fab fa-github"},
-                {name: "GitLab", logo: "fab fa-gitlab"},
-                {name: "WordPress", logo: "fab fa-wordpress"},
-                {name: "Windows", logo: "fab fa-windows"},
-                {name: "Linux", logo: "fab fa-linux"},
-                {name: "MacOS", logo: "fab fa-apple"},
-                {name: "Docker", logo: "fab fa-docker"}
+                {key:0, name: "HTML5", logo: "fab fa-html5"},
+                {key:1,name: "CSS3", logo: "fab fa-css3"},
+                {key:2,name: "JavaScript", logo: "fab fa-js-square"},
+                {key:3,name: "Python", logo: "fab fa-python"},
+                {key:4,name: "Java", logo: "fab fa-java"},
+                {key:5,name: "GitHub", logo: "fab fa-github"},
+                {key:6,name: "GitLab", logo: "fab fa-gitlab"},
+                {key:7,name: "WordPress", logo: "fab fa-wordpress"},
+                {key:8,name: "Windows", logo: "fab fa-windows"},
+                {key:9,name: "Linux", logo: "fab fa-linux"},
+                {key:10,name: "MacOS", logo: "fab fa-apple"},
+                {key:11,name: "Docker", logo: "fab fa-docker"}
             ]
         }
     }
@@ -252,7 +277,7 @@ class OtherSkills extends Component {
             <div>
                 <Grid>
                     {skills.map(item =>
-                        <Col className="otherSkills" md={3} xs={6} style={style}>
+                        <Col key={item.key} className="otherSkills" md={3} xs={6} style={style}>
                             <i className={item.logo} style={icons}/><br/><br/>
                             <label>{item.name}</label>
                         </Col>
@@ -268,7 +293,7 @@ const Interests = () =>{
     const middle = {
         textAlign: "center",
         margin: "30px auto",
-        width: "65vw"
+        width: "60vw"
     };
     return(
         <div style={middle}>
@@ -355,16 +380,6 @@ const TempContact = () =>{
 /*==============Header & Footer==================*/
 //Header
 const CustomHeader = () => {
-    //Scrolling progress bar
-    if(!document.getElementById("progressBar")){
-        window.onscroll = () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-        };
-    }
-
     return(
         <div className="header" id={"navbar"} >
             <Grid>
@@ -380,7 +395,7 @@ const CustomHeader = () => {
                         <AnchorLink name={"CONTACT"} link={"#contact"} />
                     </Col>
                     <Col xs={10} mdHidden lgHidden>
-
+                        EY
                     </Col>
                 </Row>
             </Grid>
@@ -395,23 +410,13 @@ const CustomHeader = () => {
 const Footer = ({id}) =>{
     //On scrolling footer hide and show
     /* When the user scrolls down, hide the footer. When the user scrolls up, show the footer */
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = () => {
-        let currentScrollPos = window.pageYOffset;
-        if (prevScrollpos < currentScrollPos) {
-            document.getElementById("footer").style.bottom = "-60px";
-        } else {
-            document.getElementById("footer").style.bottom = "0px";
-        }
-        prevScrollpos = currentScrollPos;
-    };
     return(
         <footer id={id}>
             Developed with React<Spin><img alt="reactlogo" src={logo} width={30}/></Spin><br/>
             by <b> Riordan Dervin Alfredo </b>&copy; 2018
         </footer>
     );
-}
+};
 
 
 export default App;

@@ -1,0 +1,21 @@
+.gridStack{
+    text-align: center;
+    margin: 20px;
+}
+
+.columnStack{
+    height:20vh;
+    width: 100%;
+    border-radius: 25px;
+    background-color: white;
+    margin: 1vw;
+}
+
+.columnStack i{
+    margin: 4vh;
+    font-size: 10vw;
+    color: #262626;
+}
+.columnStack p{
+    color: #262626;
+}

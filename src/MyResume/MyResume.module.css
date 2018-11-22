@@ -33,6 +33,7 @@
 .research{
     margin: 0 9vw;
 }
+
 .research h4{
     margin-top: 3vh;
     color:#c39d63;
@@ -43,4 +44,11 @@
     text-align: justify;
     line-height: 2em;
     font-size: 1.2em;
+}
+
+/*Mobile CSS*/
+@media(max-width: 1224px){
+    .research p{
+        font-size: 1em;
+    }
 }

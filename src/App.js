@@ -150,8 +150,8 @@ const CardContent = () =>
         <Separator/>
         <div className={"content"}>
             <p>
-                Welcome to my portfolio website.
-                This website is under construction at the moment.
+                Hello! Welcome to my portfolio website. I'm final year software engineering (honours)
+                student at Monash University. This website is under construction at the moment.
                 It is planned to be finished by <b>30 November 2018</b>.
             </p>
             <h3>STAY TUNED!</h3>
@@ -348,28 +348,33 @@ const TempContact = () =>{
         textAlign:"center"
     };
 
-
     return(
         <div className={"contact-temp"}>
             <Grid >
                 <Row style={rowStyles}>
-                    <Col md={4}>
+                    <Col md={3}>
                         <a href={"mailto:riordan.alfredo@gmail.com"}>
                             <i className={"material-icons contact-icon"}>email</i>
                         </a>
                         <p>Email me</p>
                     </Col>
-                    <Col md={4}>
+                    <Col md={3}>
                         <a href={"https://www.linkedin.com/in/riordan-alfredo/"}>
                             <i className={"fab fa-linkedin-in contact-icon"}> </i>
                         </a>
                         <p>Connect me in LinkedIn</p>
                     </Col>
-                    <Col md={4}>
+                    <Col md={3}>
                         <a href={"https://wa.me/61449091145/?text=" + res}>
                             <i className={"fab fa-whatsapp contact-icon"}> </i>
                         </a>
                         <p>Chat in WhatsApp</p>
+                    </Col>
+                    <Col md={3}>
+                        <a href={"https://github.com/riordanalfredo?tab=repositories" + res}>
+                            <i className={"fab fa-github contact-icon"}> </i>
+                        </a>
+                        <p>Check my repositories!</p>
                     </Col>
                 </Row>
             </Grid>

@@ -29,7 +29,7 @@ const Education = () =>{
         padding: "2vh"
     };
     return(
-        <Fade bottom>
+        <Fade left>
             <div className={resumeStyle.theBox}>
                 <h2 >Education </h2>
                 <Grid style={whole}>
@@ -61,7 +61,7 @@ const Education = () =>{
 
 
 const Research = () =>
-    <Fade bottom>
+    <Fade right>
     <div className={resumeStyle.theBox}>
         <h2>Research Studies</h2>
             <div className={resumeStyle.research}>

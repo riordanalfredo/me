@@ -287,20 +287,17 @@ class OtherSkills extends Component {
             </div>
         );
     }
-};
+}
 
 const Interests = () =>{
-    const middle = {
-        textAlign: "center",
-        margin: "30px auto",
-        width: "60vw"
-    };
     return(
-        <div style={middle}>
+        <div className="interests">
             <p>
                 I am interested in Artificial Intelligence (AI), User Experience &
-                User Interface (UI & UX), Software testing, and Astronomy topics. In leisure time,
+                User Interface (UI & UX), Software testing, and Astronomy topics.
+                <br/>In leisure time,
                 I create graphic design, doodling, and playing video / board games.
+
                 Sometimes, I read <a href={"https://medium.com/"}>Medium</a> to gain knowledge and
                 read memes / graphic novels to refresh my mind.
             </p>

@@ -175,10 +175,18 @@
     min-height: 100vh;
 }
 .skills p{
+    text-align: center;
     color:#f2f2f2;
     font-size:1.5em;
     letter-spacing: 3px;
     line-height: 1.7em;
+}
+
+.interests{
+    position: relative;
+    text-align: center;
+    margin: 30px 10% 30px 10%;
+    word-wrap: break-word;
 }
 
 .skills h2{
@@ -303,7 +311,7 @@
     .card-content p{
         text-align: justify;
         text-justify: inter-word;
-        font-size:2vh;
+        font-size:1.1em;
         color:white;
         letter-spacing: 0.08em;
     }

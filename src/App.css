@@ -145,7 +145,7 @@
         font-size:30%;
     }
 }
-
+/*Introduction*/
 .picture{
     position: relative;
     z-index: 5;
@@ -251,7 +251,7 @@
 .card{
     margin:30px auto;
     border-radius: 15px;
-    height: 500px;
+    height: 540px;
     width:32rem;
     background-color:white;
     /*Shadow effect*/
@@ -272,7 +272,9 @@
 }
 
 .card-desc{
-    height:170px;
+    height:120px;
+    margin-left: 1vw;
+    margin-right:1vw;
 }
 .card-desc h2{
     color: #c39d63;
@@ -280,6 +282,17 @@
 }
 .card-desc h2:hover{
     color: #fad8a0;
+}
+
+.chips-pg{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+    font-size:1.2em;
+}
+
+.chips-element{
+    margin:2px;
 }
 
 /*Desktop View*/
@@ -292,7 +305,7 @@
         position: relative;
         height: 300px; width:30vw;
         text-align:center;
-        padding: 5% 7% 10px 18%;
+        padding: 5% 5% 10px 19%;
         margin: 0 auto 50px -50px;
         border: 4px solid transparent;
         border-radius:25px;
@@ -308,11 +321,13 @@
         z-index: -1;
         border-radius: 25px;
     }
+
     .card-content p{
+        font-family: "Helvetica Neue";
         text-align: justify;
         text-justify: inter-word;
         font-size:1.1em;
-        color:white;
+        color: white;
         letter-spacing: 0.08em;
     }
 }
@@ -321,7 +336,6 @@
 @media(max-width: 1224px){
     .picture{
         text-align: center;
-
     }
 
     #pp{
@@ -358,8 +372,8 @@
     .card{
         margin:30px auto;
         border-radius: 25px;
-        height: 450px;
-        width:85vw;
+        height: 500px;
+        width:300px;
         background-color:white;
         box-shadow: 0px 15px 25px -6px rgba(196,196,196,1);
     }

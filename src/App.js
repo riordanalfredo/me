@@ -150,11 +150,13 @@ const CardContent = () =>
         <Separator/>
         <div className={"content"}>
             <p>
-                Hello! Welcome to my portfolio website. I'm final year software engineering (honours)
-                student at Monash University. This website is under construction at the moment.
-                It is planned to be finished by <b>30 November 2018</b>.
+                I'm final year Software Engineering (Honours)
+                student at Monash University. While I'm a proficient full-stack developer, my expertise is
+                in front-end development. <br/><br/>
+
+                I'm motivated by product success and business growth,
+                not only technology for technology's sake. Please feel free to contact me to talk about your bright ideas.
             </p>
-            <h3>STAY TUNED!</h3>
         </div>
     </div>;
 
@@ -293,11 +295,9 @@ const Interests = () =>{
     return(
         <div className="interests">
             <p>
-                I am interested in Artificial Intelligence (AI), User Experience &
-                User Interface (UI & UX), Software testing, and Astronomy topics.
-                <br/>In leisure time,
+                I am interested in User Experience & User Interface (UI & UX),
+                Software testing, and Astronomy topics.<br/>In leisure time,
                 I create graphic design, doodling, and playing video / board games.
-
                 Sometimes, I read <a href={"https://medium.com/"}>Medium</a> to gain knowledge and
                 read memes / graphic novels to refresh my mind.
             </p>

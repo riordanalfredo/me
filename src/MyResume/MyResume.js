@@ -10,9 +10,9 @@ export class MyResume extends Component{
     render(){
         return(
             <Fragment >
-                <DownloadResume/>
                 <Education/>
                 <Research/>
+                <DownloadResume/>
             </Fragment>
         );
     }

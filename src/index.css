@@ -14,7 +14,7 @@ body {
 main{
     padding-bottom:60px;
 }
-a, a:hover{ text-decoration: none; color:#fad8a0 }
+a, a:hover, a:after, a:focus{ text-decoration: none; color:#fad8a0 }
 h1{ margin: 0;    font-weight: bold; }
 h3{ color:white; }
 

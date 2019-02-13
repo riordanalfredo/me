@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "rioalfredo.com/precache-manifest.3455838bf1a3037c2aefb972e11e53da.js"
+  "riordanalfredo.github.io/me/precache-manifest.a201dae9b5792a146913ff9d350b6e57.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("rioalfredo.com/index.html", {
+workbox.routing.registerNavigationRoute("riordanalfredo.github.io/me/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

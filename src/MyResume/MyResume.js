@@ -10,9 +10,9 @@ export class MyResume extends Component{
     render(){
         return(
             <Fragment >
+                <DownloadResume/>
                 <Education/>
                 <Research/>
-                <DownloadResume/>
             </Fragment>
         );
     }
@@ -29,39 +29,36 @@ const Education = () =>{
         padding: "2vh"
     };
     return(
-        <Fade left>
-            <div className={resumeStyle.theBox}>
-                <h2 >Education </h2>
-                <Grid style={whole}>
-                    <Row>
-                        <Col md={4}>
-                            <h4>2015-2016</h4>
-                            <b>Major in Science Studies</b>
-                            <p>Saint Joseph High School <br/> Malang, East Java</p>
-                            <i>Indonesia</i>
-                        </Col>
-                        <Col md={4}>
-                            <h4>2016-2017</h4>
-                            <b>Diploma of Engineering, Engineering</b>
-                            <p>Monash College <br/> Melbourne, Victoria </p>
-                            <i>Australia</i>
-                        </Col>
-                        <Col md={4}>
-                            <h4>2017-2019</h4>
-                            <b>Bachelor of Software Engineering (Honours)</b>
-                            <p>Monash University <br/> Melbourne, Victoria </p>
-                            <i>Australia</i>
-                        </Col>
-                    </Row>
-                </Grid>
-            </div>
-        </Fade>
+        <div className={resumeStyle.theBox}>
+            <h2 >Education </h2>
+            <Grid style={whole}>
+                <Row>
+                    <Col md={4}>
+                        <h4>2015-2016</h4>
+                        <b>Major in Science Studies</b>
+                        <p>Saint Joseph High School <br/> Malang, East Java</p>
+                        <i>Indonesia</i>
+                    </Col>
+                    <Col md={4}>
+                        <h4>2016-2017</h4>
+                        <b>Diploma of Engineering, Engineering</b>
+                        <p>Monash College <br/> Melbourne, Victoria </p>
+                        <i>Australia</i>
+                    </Col>
+                    <Col md={4}>
+                        <h4>2017-2019</h4>
+                        <b>Bachelor of Software Engineering (Honours)</b>
+                        <p>Monash University <br/> Melbourne, Victoria </p>
+                        <i>Australia</i>
+                    </Col>
+                </Row>
+            </Grid>
+        </div>
     )
 };
 
 
 const Research = () =>
-    <Fade right>
     <div className={resumeStyle.theBox}>
         <h2>Research Studies</h2>
             <div className={resumeStyle.research}>
@@ -78,5 +75,4 @@ const Research = () =>
                 </p>
                 <small><i>Currently the project is under process. The result will be published in here.</i></small>
             </div>
-        </div>
-    </Fade>;
+        </div>;

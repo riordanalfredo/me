@@ -1,5 +1,5 @@
 {
-  "homepage": "http://riordanalfredo.github.io/me",
+  "homepage": "http://rioalfredo.com",
   "name": "me",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "animejs": "^2.2.0",
     "create-react-app": "^2.1.1",
     "file-loader": "^2.0.0",
+    "openssl": "^1.1.0",
     "react": "^16.6.0",
     "react-bootstrap": "^0.32.4",
     "react-burger-menu": "^2.5.4",

@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <div className="App">
           <main>
-              <CustomHeader/>
+              <CustomHeader/> /*For Desktop*/
               <MediaQuery minDeviceWidth={desktop}>
                   <MediaQuery minWidth={desktop}>
                       <Grid className={"introduction"} id={"introduction"}>
@@ -82,9 +82,7 @@ class App extends Component {
                               <ItIsMe size={mobile}/>
                           </Row>
                           <Row>
-                              <Fade>
-                                  <CardHorizontal pic={ProfilePic}/>
-                              </Fade>
+                              <CardHorizontal pic={ProfilePic}/>
                           </Row>
                       </Grid>
                       <Projects mobile/>
@@ -93,15 +91,13 @@ class App extends Component {
                       <Contact/>
                   </MediaQuery>
               </MediaQuery>
-              <MediaQuery maxDeviceWidth={desktop}>
+              <MediaQuery maxDeviceWidth={desktop}> /*For Mobile*/
                   <Grid className={"introduction"} id={"introduction"}>
                       <Row>
                           <ItIsMe/>
                       </Row>
                       <Row>
-                          <Fade>
-                              <CardHorizontal pic={ProfilePic}/>
-                          </Fade>
+                          <CardHorizontal pic={ProfilePic}/>
                       </Row>
                   </Grid>
                   <Projects mobile/>
@@ -140,7 +136,7 @@ const screenCalculator = ({size}) => {
 const CardHorizontal = () =>
     <div className="card-horizontal">
         <ProfilePic/>
-        <Fade left>
+        <Fade >
             <CardContent/>
         </Fade>
     </div>;
@@ -155,7 +151,7 @@ const CardContent = () =>
                 in front-end development. <br/><br/>
 
                 I'm motivated by product success and business growth,
-                not only technology for technology's sake. Please feel free to contact me to talk about your bright ideas.
+                not only for technology's sake. Please feel free to contact me to talk about your bright ideas.
             </p>
         </div>
     </div>;
@@ -175,7 +171,7 @@ const ItIsMe = (size) =>{
             <h1>RIORDAN</h1>
             <h1>DERVIN</h1>
             <h1>ALFREDO</h1>
-            <h3>freelance full-stack developer</h3>
+            <h3>front-end/full-stack developer</h3>
         </div>
     );
 };
@@ -206,7 +202,7 @@ const Projects = ({mobile}) =>{
                 <Separator/>
                 <div className={"content"}>
                     <h1>PROJECTS</h1>
-                    <Fade bottom> <Project setting={setting}/>  </Fade>
+                    <Project setting={setting}/>
                 </div>
             </Grid>
         </div>
@@ -395,9 +391,6 @@ const CustomHeader = () => {
                         <AnchorLink name={"SKILLS"} link={"#skills"} />
                         <AnchorLink name={"RESUME"} link={"#resume"} />
                         <AnchorLink name={"CONTACT"} link={"#contact"} />
-                    </Col>
-                    <Col xs={10} mdHidden lgHidden>
-                        EY
                     </Col>
                 </Row>
             </Grid>

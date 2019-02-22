@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e0c273a-9b32-41b2-b17b-da9f3444f21b" name="Default Changelist" comment="">
+    <list default="true" id="7e0c273a-9b32-41b2-b17b-da9f3444f21b" name="Default Changelist" comment="Update CNAME">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -78,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CNAME">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -176,8 +177,8 @@
         <option value="$PROJECT_DIR$/src/MyResume/MyResume.module.css" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/CNAME" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -285,7 +286,7 @@
       <workItem from="1550224450114" duration="777000" />
       <workItem from="1550489859549" duration="1123000" />
       <workItem from="1550817755500" duration="3801000" />
-      <workItem from="1550821860310" duration="1605000" />
+      <workItem from="1550821860310" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="Test building CI">
       <created>1542327302707</created>
@@ -378,11 +379,25 @@
       <option name="project" value="LOCAL" />
       <updated>1550821968470</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update CNAME">
+      <created>1550826845314</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1550826845314</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update CNAME">
+      <created>1550827175768</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1550827175768</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166778000" />
+    <option name="totallyTimeSpent" value="167385000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,7 +492,8 @@
     <MESSAGE value="Finish adding other notable skills." />
     <MESSAGE value="Finish with both sizes, need refactor for maintainability." />
     <MESSAGE value="Submitting with changes in &quot;full-stack languages&quot; size, and introduction section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Submitting with changes in &quot;full-stack languages&quot; size, and introduction section" />
+    <MESSAGE value="Update CNAME" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CNAME" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/package.json" />
@@ -696,17 +712,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CNAME">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CNAME">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

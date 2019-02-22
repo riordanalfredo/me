@@ -34,13 +34,13 @@ const Education = () =>{
             <Grid style={whole}>
                 <Row>
                     <Col md={4}>
-                        <h4>2015-2016</h4>
+                        <h4>2012-2015</h4>
                         <b>Major in Science Studies</b>
                         <p>Saint Joseph High School <br/> Malang, East Java</p>
                         <i>Indonesia</i>
                     </Col>
                     <Col md={4}>
-                        <h4>2016-2017</h4>
+                        <h4>2015-2016</h4>
                         <b>Diploma of Engineering, Engineering</b>
                         <p>Monash College <br/> Melbourne, Victoria </p>
                         <i>Australia</i>
@@ -73,6 +73,6 @@ const Research = () =>
                     <br/>The output of this project is expected to be a toolchain that (1) extracts the Javascript
                     code from Android apps and (2) analyses the extracted code for identifying potential vulnerabilities.
                 </p>
-                <small><i>Currently the project is under process. The result will be published in here.</i></small>
+                <a href={"https://github.com/riordanalfredo/Hybrid-Android-App-Vulnerability-Analyser"}>Interested? Find out more in here . . .</a>
             </div>
         </div>;

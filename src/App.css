@@ -184,8 +184,9 @@
 
 .interests{
     position: relative;
+    font-size: 0.9em;
     text-align: center;
-    margin: 30px 10% 30px 10%;
+    margin: 30px 14% 30px 14%;
     word-wrap: break-word;
 }
 
@@ -324,10 +325,9 @@
 
     .card-content p{
         text-align: justify;
-        text-justify: inter-word;
-
         color: white;
         letter-spacing: 0.08em;
+        font-size: 0.9em;
     }
 }
 

@@ -146,12 +146,13 @@ const CardContent = () =>
         <Separator/>
         <div className={"content"}>
             <p>
-                I'm final year Software Engineering (Honours)
-                student at Monash University. While I'm a proficient full-stack developer, my expertise is
-                in front-end development. <br/><br/>
+                Hi! Welcome to my humble website!
+                <a href="https://www.16personalities.com/entj-personality"> ENTJ</a> person 👨🏻‍🚀️.
+                I'm a final year Software Engineering (Honours) student at Monash University, Melbourne.<br/><br/>
 
-                I'm motivated by product success and business growth,
-                not only for technology's sake. Please feel free to contact me to talk about your bright ideas.
+                In programming, I'm confident in building full-stack system (MERN-stack), and always focus on what user sees (UI) &amp; and feels (UX).<br/><br/>
+
+                I'm self-motivated and always open for any opportunities. Please feel free to <a href={"#contact"}> contact me</a> to talk about ideas, astronomy, or anything!
             </p>
         </div>
     </div>;
@@ -291,11 +292,12 @@ const Interests = () =>{
     return(
         <div className="interests">
             <p>
-                I am interested in User Experience & User Interface (UI & UX),
-                Software testing, and Astronomy topics.<br/>In leisure time,
-                I create graphic design, doodling, and playing video / board games.
-                Sometimes, I read <a href={"https://medium.com/"}>Medium</a> to gain knowledge and
-                read memes / graphic novels to refresh my mind.
+                I am interested in User Interface &amp; User Experience (UI & UX),
+                Software design, and Astronomy topics.<br/> In leisure time,
+                I create graphic design, doodling, reading, and playing video games or boardgames.<br/>
+                I love to read <a href={"https://medium.com/"}>Medium</a>. Why? Because it has endless great stories from
+                many different perspectives,
+                and somehow it refreshes my mind :)
             </p>
         </div>
     );

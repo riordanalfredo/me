@@ -46,6 +46,10 @@
     font-size: 1.2em;
 }
 
+.research a{
+    color: #c39d63;
+    text-decoration: underline;
+}
 /*Mobile CSS*/
 @media(max-width: 1224px){
     .research p{

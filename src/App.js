@@ -410,7 +410,7 @@ const Footer = ({id}) =>{
     return(
         <footer id={id}>
             Developed with React<Spin><img alt="reactlogo" src={logo} width={30}/></Spin><br/>
-            by <b> Riordan Dervin Alfredo </b>&copy; 2018
+            by <b> Riordan Dervin Alfredo </b>&copy; 2019
         </footer>
     );
 };

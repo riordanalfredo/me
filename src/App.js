@@ -141,7 +141,7 @@ const screenCalculator = ({size}) => {
 const CardHorizontal = () =>
     <div className="card-horizontal">
         <ProfilePic/>
-        <Fade >
+        <Fade duration={2000} >
             <CardContent/>
         </Fade>
     </div>;
@@ -154,10 +154,10 @@ const CardContent = () =>
                 Hi! Welcome to my <i>SPACE</i>! I am
                 <a href="https://www.16personalities.com/entj-personality"> ENTJ</a> person 👨🏻‍🚀️.
                 I'm a final year Software Engineering (Honours) student at Monash University, Melbourne.<br/><br/>
-
-                In programming, I'm confident in building full-stack system (MERN-stack), and always focus on what user sees (UI) &amp; and feels (UX).<br/><br/>
-
-                I'm self-motivated and always open for any opportunities. Please feel free to <a href={"#contact"}> contact me</a> to talk about ideas, astronomy, or anything!
+                In programming, I'm confident in building full-stack system (MERN-stack), and always focus on what user sees (UI)
+                &amp; and feels (UX).<br/><br/>
+                I'm self-motivated and always open for any opportunities. Please feel free to <a href={"#contact"}> contact me</a>
+                to talk about ideas, astronomy, or anything!
             </p>
         </div>
     </div>;
@@ -198,6 +198,7 @@ const Projects = ({mobile}) =>{
         speed: 500,
         slidesToShow: mobile?1:3,
         slidesToScroll: 1,
+        autoplay: true,
         arrows: !mobile
     };
 

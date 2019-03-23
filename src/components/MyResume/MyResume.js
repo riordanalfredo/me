@@ -19,7 +19,7 @@ export class MyResume extends Component{
 }
 
 const DownloadResume = () =>
-    <Fade bottom>
+    <Fade bottom delay={500}>
         <p className={resumeStyle.download}>Please kindly download my resume below for your reference.</p>
         <MyButton text={"DOWNLOAD"} extraText= " RESUME"  link={"../MyResume/resume.pdf"} download={"resume.pdf"}/>
     </Fade>;

@@ -20,10 +20,11 @@
     font-size: 1.1em;
 }
 
-.theBox i {
+.theBox i{
     font-size: 1.2em;
     color: #c39d63;
 }
+
 
 .download{
     font-size: 1.7em;
@@ -32,6 +33,7 @@
 
 .research{
     margin: 0 9vw;
+
 }
 
 .research h4{

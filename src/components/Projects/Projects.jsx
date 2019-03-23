@@ -14,17 +14,16 @@ export class Project extends Component{
                     key: 1,
                     title:'Kimply Colour Game',
                     linkUrl: 'https://play.google.com/store/apps/details?id=com.kimplycolor.game&hl=en_US',
-                    desc:'A simple color choice game',
-                    bg:'https://picsum.photos/400/500/?random',
+                    desc:'A simple color choice game in Android',
+                    bg:'https://picsum.photos/400/500/?image=301',
                     chips: ['HTML','CSS', 'JavaScript']
-                }
-                ,
+                },
                 {
                     key: 2,
                     title:'Switch Puzzle Game',
                     linkUrl: 'https://bit.do/switchy',
-                    desc:'A Puzzle game web application',
-                    bg:'https://picsum.photos/400/500/?image=0',
+                    desc:'Web application puzzle game',
+                    bg:'https://picsum.photos/400/500/?image=1056',
                     chips: ['HTML','CSS', 'JavaScript']
                 },
                 {
@@ -40,7 +39,7 @@ export class Project extends Component{
                     title:'Stock Quote Monitor',
                     linkUrl: 'https://github.com/riordanalfredo/StockQuoteMntr',
                     desc:'FIT3077 assignment which is written in Java and implemented MVC architecture.',
-                    bg:'https://picsum.photos/400/500/?image=52',
+                    bg:'https://picsum.photos/400/500/?image=1',
                     chips: ['HTML','CSS', 'JavaScript', 'Java']
                 },
                 {
@@ -59,6 +58,14 @@ export class Project extends Component{
                     bg:'https://picsum.photos/400/500/?image=38',
                     chips: ['HTML','CSS', 'JavaScript', 'Java']
                 },
+                {
+                    key: 7,
+                    title:'Beans Cafe Loyalty App',
+                    linkUrl: 'https://gitlab.com/ooigloria/beans-cafe-loyalty',
+                    desc:'Applications in participation of UNIHACK 2018',
+                    bg:'https://picsum.photos/400/500/?image=82',
+                    chips: ['Android', 'XML', 'Gitlab']
+                }
             ],
         }
     }

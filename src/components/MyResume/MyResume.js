@@ -62,7 +62,7 @@ const Research = () =>
     <div className={resumeStyle.theBox}>
         <h2>Research Studies</h2>
             <div className={resumeStyle.research}>
-                <h4>Vulnerability Analysis of Hybrid Android Apps</h4>
+                <h4>  <i className="fa fa-book"/> Vulnerability Analysis of Hybrid Android Apps</h4>
                 <b> (Monash Summer Scholarship 2018)</b>
                 <p>
                     Hybrid Android apps contain functions implemented in Javascript, which makes it possible to

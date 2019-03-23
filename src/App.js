@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import {Grid, Row, Col} from 'react-bootstrap'; // Button from Bootstrap
 import MediaQuery from 'react-responsive';
 import './App.css';
@@ -8,19 +8,24 @@ import blank from './img/blank.png';
 import aus from './img/aus.png';
 //Internal javascript files
 import {MyForm} from './js/forms.jsx';
-import {Project} from './Projects/Projects.jsx';
-import {MyResume} from "./MyResume/MyResume";
-import {SolarSystem} from './SolarSystem/SolarSystem';
-import {Separator} from "./Separator/Separator";
-import {FullStack} from "./FullStack/FullStack";
+import {Project} from './components/Projects/Projects.jsx';
+import {MyResume} from "./components/MyResume/MyResume";
+import {SolarSystem} from './components/SolarSystem/SolarSystem';
+import {Separator} from "./components/Separator/Separator";
+import {FullStack} from "./components/FullStack/FullStack";
 //Animation API
 import Fade from 'react-reveal/Fade';
 import Spin from 'react-reveal/Spin';
-import { slide as Menu } from 'react-burger-menu';
 
 //Screen Sizes
 const mobile = 300;
 const desktop = 1224;
+
+//How to run & deploy
+/*
+run locally : npm start
+deploy: npm run deploy
+* */
 
 class App extends Component {
     constructor(props)
@@ -37,7 +42,7 @@ class App extends Component {
        window.onscroll = () => {
            let currentScrollPos = window.pageYOffset;
            if (prevScrollpos < currentScrollPos) {
-               document.getElementById("footer").style.bottom = "-60px";
+               document.getElementById("footer").style.bottom = "-40px";
            } else {
                document.getElementById("footer").style.bottom = "0px";
            }
@@ -146,7 +151,7 @@ const CardContent = () =>
         <Separator/>
         <div className={"content"}>
             <p>
-                Hi! Welcome to my humble website!
+                Hi! Welcome to my <i>SPACE</i>! I am
                 <a href="https://www.16personalities.com/entj-personality"> ENTJ</a> person 👨🏻‍🚀️.
                 I'm a final year Software Engineering (Honours) student at Monash University, Melbourne.<br/><br/>
 
@@ -292,12 +297,15 @@ const Interests = () =>{
     return(
         <div className="interests">
             <p>
-                I am interested in User Interface &amp; User Experience (UI & UX),
-                Software design, and Astronomy topics.<br/> In leisure time,
-                I create graphic design, doodling, reading, and playing video games or boardgames.<br/>
-                I love to read <a href={"https://medium.com/"}>Medium</a>. Why? Because it has endless great stories from
-                many different perspectives,
-                and somehow it refreshes my mind :)
+                I am interested in science, IT, engineering, and astronomy. In software development,
+                my favourite topic is understanding what user sees &amp; feels (User Interface & User Experience).
+                I found it is challenging, creative, and fun! <br/><br/>
+
+                Furthermore, I am also confident in software design, architecture, security, testing and web development.
+                In leisure time, I create graphic design, doodling, reading, and playing video games or boardgames with my friends and family.<br/><br/>
+
+                I love to read <a href={"https://medium.com/"}>Medium</a>. Why? Because it gives insights and endless great stories from
+                different perspectives. Somehow it refreshes my mind :)
             </p>
         </div>
     );
@@ -409,8 +417,7 @@ const Footer = ({id}) =>{
     /* When the user scrolls down, hide the footer. When the user scrolls up, show the footer */
     return(
         <footer id={id}>
-            Developed with React<Spin><img alt="reactlogo" src={logo} width={30}/></Spin><br/>
-            by <b> Riordan Dervin Alfredo </b>&copy; 2019
+            Engineered by <b> 👨🏻‍🚀 Riordan Dervin Alfredo </b>&copy; 2019
         </footer>
     );
 };

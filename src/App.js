@@ -151,13 +151,12 @@ const CardContent = () =>
         <Separator/>
         <div className={"content"}>
             <p>
-                Hi! Welcome to my <i>SPACE</i>! I am
+                Hi! Welcome to my 🌌<i>SPACE</i>! I am
                 <a href="https://www.16personalities.com/entj-personality"> ENTJ</a> person 👨🏻‍🚀️.
                 I'm a final year Software Engineering (Honours) student at Monash University, Melbourne.<br/><br/>
                 In programming, I'm confident in building full-stack system (MERN-stack), and always focus on what user sees (UI)
                 &amp; and feels (UX).<br/><br/>
-                I'm self-motivated and always open for any opportunities. Please feel free to <a href={"#contact"}> contact me</a>
-                to talk about ideas, astronomy, or anything!
+                I'm self-motivated and always open for any opportunities. Please feel free to <a href={"#contact"}> contact me </a> 🤙to talk about exciting ideas, astronomy, or anything!
             </p>
         </div>
     </div>;

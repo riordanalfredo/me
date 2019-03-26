@@ -2,20 +2,17 @@ import React, {Component} from 'react';
 import {Grid, Row, Col} from 'react-bootstrap'; // Button from Bootstrap
 import MediaQuery from 'react-responsive';
 import './App.css';
-//Pictures
-import logo from './img/logo.svg';
 import blank from './img/blank.png';
 import aus from './img/aus.png';
-//Internal javascript files
-import {MyForm} from './js/forms.jsx';
+
+import {MyForm} from './js/forms.jsx'; //Internal javascript files
 import {Project} from './components/Projects/Projects.jsx';
 import {MyResume} from "./components/MyResume/MyResume";
 import {SolarSystem} from './components/SolarSystem/SolarSystem';
 import {Separator} from "./components/Separator/Separator";
 import {FullStack} from "./components/FullStack/FullStack";
-//Animation API
-import Fade from 'react-reveal/Fade';
-import Spin from 'react-reveal/Spin';
+
+import Fade from 'react-reveal/Fade'; //Animation API
 
 //Screen Sizes
 const mobile = 300;
@@ -156,7 +153,7 @@ const CardContent = () =>
                 I'm a final year Software Engineering (Honours) student at Monash University, Melbourne.<br/><br/>
                 In programming, I'm confident in building full-stack system (MERN-stack), and always focus on what user sees (UI)
                 &amp; and feels (UX).<br/><br/>
-                I'm self-motivated and always open for any opportunities. Please feel free to <a href={"#contact"}> contact me </a> 🤙to talk about exciting ideas, astronomy, or anything!
+                I'm self-motivated and always open for any opportunities. Please feel free to <a href={"#contact"}> contact me </a> 🤙to talk about exciting ideas, astronomy, software or anything!
             </p>
         </div>
     </div>;

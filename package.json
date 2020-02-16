@@ -18,7 +18,7 @@
     "react-scripts": "^2.1.1",
     "react-skillbars": "^1.5.1",
     "react-slick": "^0.23.2",
-    "yarn": "^1.12.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"

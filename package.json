@@ -15,10 +15,11 @@
     "react-dom": "^16.6.0",
     "react-responsive": "^6.0.1",
     "react-reveal": "^1.2.2",
-    "react-scripts": "^2.1.1",
+    "react-scripts": "^3.3.0",
     "react-skillbars": "^1.5.1",
     "react-slick": "^0.23.2",
-    "yarn": "^1.12.3"
+    "yarn": "^1.22.0",
+    "snyk": "^1.336.0"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"
@@ -29,12 +30,15 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "snyk": true
 }
